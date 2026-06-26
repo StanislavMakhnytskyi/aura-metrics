@@ -42,21 +42,6 @@ export function SiteHeader() {
               className="hidden sm:flex"
             >
               <a
-                href="https://aurametrics.com/blocks"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="dark:text-foreground"
-              >
-                Blocks
-              </a>
-            </Button>
-            <Button
-              variant="ghost"
-              asChild
-              size="sm"
-              className="hidden sm:flex"
-            >
-              <a
                 href="/landing"
                 rel="noopener noreferrer"
                 target="_blank"

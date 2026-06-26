@@ -50,7 +50,6 @@ const navigationItems = [
 // Solutions menu items for mobile
 const solutionsItems = [
   { title: "Browse Products" },
-  { name: "Free Blocks", href: "#free-blocks" },
   { name: "Premium Templates", href: "#premium-templates" },
   { name: "Admin Dashboards", href: "#admin-dashboards" },
   { name: "Landing Pages", href: "#landing-pages" },

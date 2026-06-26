@@ -1,15 +1,18 @@
 "use client"
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { ArrowRight, Play, Star } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { DotPattern } from '@/components/dot-pattern'
+import Link from "next/link"
+import Image from "next/image"
+import { ArrowRight, Play, Star } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { DotPattern } from "@/components/dot-pattern"
 
 export function HeroSection() {
   return (
-    <section id="hero" className="relative overflow-hidden bg-gradient-to-b from-background to-background/80 pt-16 sm:pt-20 pb-16">
+    <section
+      id="hero"
+      className="relative overflow-hidden bg-gradient-to-b from-background to-background/80 pt-16 sm:pt-20 pb-16"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0">
         {/* Dot pattern overlay using reusable component */}
@@ -23,7 +26,6 @@ export function HeroSection() {
             <Badge variant="outline" className="px-4 py-2 border-foreground">
               <Star className="w-3 h-3 mr-2 fill-current" />
               Introducing AuraMetrics v2.0
-              <ArrowRight className="w-3 h-3 ml-2" />
             </Badge>
           </div>
 
@@ -31,14 +33,17 @@ export function HeroSection() {
           <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
             See Your Business
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              {" "}Clearly in Real-Time{" "}
+              {" "}
+              Clearly in Real-Time{" "}
             </span>
             with AuraMetrics BI
           </h1>
 
           {/* Subheading */}
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Centralize your databases, monitor growth trends, track revenue pipelines, and empower your team with visual business intelligence dashboards.
+            Centralize your databases, monitor growth trends, track revenue
+            pipelines, and empower your team with visual business intelligence
+            dashboards.
           </p>
 
           {/* CTA Buttons */}
@@ -49,7 +54,12 @@ export function HeroSection() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="text-base cursor-pointer" asChild>
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-base cursor-pointer"
+              asChild
+            >
               <a href="#">
                 <Play className="mr-2 h-4 w-4" />
                 Watch Demo
