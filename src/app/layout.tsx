@@ -3,7 +3,7 @@ import "./globals.css"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { SidebarConfigProvider } from "@/contexts/sidebar-context"
-import { GoogleAnalytics } from "@next/third-parties/google"
+import { CookieConsent } from "@/components/cookie-consent"
 import { inter } from "@/lib/fonts"
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
         <ThemeProvider defaultTheme="system" storageKey="nextjs-ui-theme">
           <SidebarConfigProvider>{children}</SidebarConfigProvider>
         </ThemeProvider>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
+        <CookieConsent gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
       </body>
     </html>
   )
