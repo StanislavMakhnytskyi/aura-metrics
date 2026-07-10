@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { CookieIcon } from "lucide-react"
 import { GoogleAnalytics } from "@next/third-parties/google"
+import { Analytics } from "@vercel/analytics/next"
 
 import {
   Dialog,
@@ -83,7 +84,12 @@ export function CookieConsent({ gaId }: { gaId?: string }) {
         </DialogContent>
       </Dialog>
 
-      {consent === "accepted" && gaId ? <GoogleAnalytics gaId={gaId} /> : null}
+      {consent === "accepted" && gaId ? (
+        <>
+          <GoogleAnalytics gaId={gaId} />
+          <Analytics />
+        </>
+      ) : null}
     </>
   )
 }
