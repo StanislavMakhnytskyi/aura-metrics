@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { SidebarConfigProvider } from "@/contexts/sidebar-context"
 import { CookieConsent } from "@/components/cookie-consent"
 import { inter } from "@/lib/fonts"
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: "AuraMetrics Dashboard",
@@ -23,6 +24,7 @@ export default function RootLayout({
           <SidebarConfigProvider>{children}</SidebarConfigProvider>
         </ThemeProvider>
         <CookieConsent gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
+        <Analytics />
       </body>
     </html>
   )
